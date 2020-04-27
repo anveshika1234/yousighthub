@@ -1,7 +1,7 @@
 <?php 
 
 if(isset($_POST['submit'])){
-    $to = "yoursighthub@gmail.com"; // this is your Email address
+    $to = "shreyashsrivastavaakb@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $fullname = $_POST['fullname'];
      $email = $_POST['email'];
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message .= "Name: ". $fullname ."\n";
-    $message .= "Contact Number: ".  $phone ."\n";
+    $message .= "Contact Number: ". $phone ."\n";
   
     $message .= "Message: ". $message ."\n";
      
