@@ -7,5 +7,9 @@ $headers = 'From: yoursighthub@gmail.com' . "\r\n" .
     'Reply-To: yoursighthub@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
+if(mail($to, $subject, $message, $headers)){
+ echo "successful";
+ else{
+  echo "unsuccessful";
+ }
 ?> 
