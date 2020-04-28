@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 
 if(isset($_POST['submit'])){
     $to = "yoursighthub@gmail.com"; // this is your Email address
@@ -27,4 +27,19 @@ if(isset($_POST['submit'])){
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     // You cannot use header and echo together. It's one or the other.
     }
+?>
+ -->
+
+<?php
+$to = 'anveshikagbu@gmail.com';
+$subject = 'Marriage Proposal';
+$message = 'Hi Jane, will you marry me?'; 
+$from = 'anveshikagbu@gmail.com';
+ 
+// Sending email
+if(mail($to, $subject, $message)){
+    echo 'Your mail has been sent successfully.';
+} else{
+    echo 'Unable to send email. Please try again.';
+}
 ?>
