@@ -1,17 +1,21 @@
 
- <?php
-$to      = 'anveshikagbu@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: anveshikagbu@gmail.com' . "\r\n" .
-    'Reply-To: anveshikagbu@gmail.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+<?php
+// If you are using Composer
+require 'vendor/autoload.php';
 
-if(mail($to, $subject, $message, $headers)){
- echo "successful";
- 
-}
- else{
-  echo "unsuccessful";
- }
-?> 
+// If you are not using Composer (recommended)
+// require("path/to/sendgrid-php/sendgrid-php.php");
+
+$from = new SendGrid\Email(null, "anveshikagbu@gmail.com");
+$subject = "Hello World from the SendGrid PHP Library!";
+$to = new SendGrid\Email(null, "anveshikagbu@gmail.com");
+$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
+
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
