@@ -9,6 +9,8 @@ $headers = 'From: anveshikagbu@gmail.com' . "\r\n" .
 
 if(mail($to, $subject, $message, $headers)){
  echo "successful";
+ 
+}
  else{
   echo "unsuccessful";
  }
