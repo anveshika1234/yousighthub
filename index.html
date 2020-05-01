@@ -136,17 +136,14 @@ p i {
   //   }
   // , 5000);
 
-  var functionDone = false;
-var timeout = setTimeout(function() {
-    someFunction();
-    functionDone = true;
-}, 8000);
+ 
 $(document).ready(function() {
-  $("#myModal").modal('show');
-    if (!functionDone) {
-        clearTimeout(timeout);
-        someFunction();
-    }
+
+function mymodal{
+$("#myModal").modal('show');
+}
+  
+  setTimeOut (mymodal, 6000);
 });
 </script>
      </head>
