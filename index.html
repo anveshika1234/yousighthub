@@ -69,7 +69,7 @@ a {
   line-height: 3;
 }
 
-p {
+.para {
   color: white;
   position: relative;
   left: -10px;
@@ -86,7 +86,7 @@ p {
   z-index:10;
 }
 
-p i {
+.para i {
   left: 30px;
   position: relative;
   vertical-align: middle;
@@ -135,15 +135,15 @@ p i {
   background-color: #DD4B39;
 }*/
 
-.linkedin p i {
+.linkedin .para i {
   left: 20px;
 }
 
-.google p i {
+.google .para i {
   left: 35px;
 }
 
-.youtube p i {
+.youtube .para i {
   left: 18px;
 }
 
@@ -270,7 +270,7 @@ $(document).ready(function() {
 <div id="sidebar">
   <div class="social facebook">
     <a href="https://www.facebook.com/yoursighthub/?modal=admin_todo_tour" target="_blank">
-      <p>Like on Facebook <i class="fa fa-facebook "></i> </p>
+      <p class="para">Like on Facebook <i class="fa fa-facebook "></i> </p>
     </a>
   </div>
   <!-- <div class="social twitter">
@@ -285,12 +285,12 @@ $(document).ready(function() {
   </div> -->
   <div class="social youtube">
     <a href="https://www.youtube.com/channel/UCnaBtifNJAKani_8dzAgOww?view_as=subscriber" target="_blank">
-      <p>Subscribe on Youtube<i class="fa fa-youtube-play"></i> </p>
+      <p class="para">Subscribe on Youtube<i class="fa fa-youtube-play"></i> </p>
     </a>
   </div>
   <div class="social instagram">
     <a href="https://www.instagram.com/your_sight_hub/?hl=en " target="_blank">
-      <p>Follow on Instagram<i class="fa fa-instagram"></i> </p>
+      <p class="para">Follow on Instagram<i class="fa fa-instagram"></i> </p>
     </a>
   </div>
  <!--  <div class="social linkedin">
