@@ -1,4 +1,4 @@
 
 User-agent: *
 Disallow:
-Sitemap: http://www.yoursighthub.xyz/sitemap.html
+Sitemap: www.yoursighthub.xyz/sitemap.html
